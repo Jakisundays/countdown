@@ -3,7 +3,7 @@ import "../styles/Card.css";
 
 const Card = ({children}) => {
   return (
-    <div class="card">
+    <div className="card">
       {children}
     </div>
   );

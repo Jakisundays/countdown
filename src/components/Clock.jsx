@@ -77,7 +77,7 @@ const Clock = () => {
 
   return (
     <section className="clock-container">
-      <video src={bgVid} loop autoPlay muted/>
+      <video src={bgVid} loop autoPlay muted controls/>
       <Card>
         <Timer
           timerDays={timerDays}

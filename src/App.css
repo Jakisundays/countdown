@@ -134,3 +134,7 @@ video {
   /* align-items: center; */
   /* color: white; */
 }
+
+.clock span{
+  font-size: 4vh;
+}
