@@ -2,30 +2,37 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto Condensed", sans-serif;
+  /* font-family: "Cute Font", cursive; */
+  font-family: "Iceland", cursive;
+}
+
+@font-face {
+  font-family: "clockFont";
+  src: local("clockFont"), url("./fonts/clockFont.ttf") format("truetype");
 }
 
 .clock-container {
   height: 100vh;
   max-width: 100%;
   position: relative;
-  /* border: solid red; */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
+  background-color: black;
 }
 
 .timer-wrapper {
   text-shadow: 3px 3px 1px black;
   color: #ffffff;
-  z-index: 999;
+  /* z-index: 999; */
 }
 
 .clock {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* text-shadow: 1px 1px 7px; */
+  text-shadow: 1px 1px 7px orangered;
 }
 
 .clock section {
@@ -37,9 +44,10 @@
 }
 .clock section p {
   font-size: 10vw;
+  font-family: "clockFont";
 }
 .clock section small {
-  font-size: 2vh;
+  font-size: 35px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -49,12 +57,12 @@
 }
 
 video {
-  /* width: 100%; */
-  position: absolute;
-  max-width: 100%;
-  height: 100%;
+  height: 50vh;
   object-fit: fill;
-  z-index: 0;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 0px white;
+  -webkit-box-shadow: 0px 0px 5px 0px white;
+  -moz-box-shadow: 0px 0px 5px 0px white;
 }
 
 @keyframes App-logo-spin {
@@ -67,7 +75,9 @@ video {
 }
 
 .clock span {
-  font-size: 4vh;
+  font-size: 12vh;
+  font-family: "clockFont";
+  margin-bottom: 35px;
 }
 
 .video-container {
@@ -77,4 +87,24 @@ video {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+@media screen and (max-width: 425px) {
+  .clock-container{
+    justify-content: center;
+    gap: 100px;
+  }
+  .clock span {
+    font-size: 5vh;
+    font-family: "clockFont";
+    margin-bottom: 17px;
+  }
+  video {
+    height: 30vh;
+    width: 92vw;
+    max-width: 100%;
+  }
+  .clock section small {
+    font-size: 12px;
+  }
 }

@@ -77,17 +77,16 @@ const Clock = () => {
 
   return (
     <section className="clock-container">
-      <div className="video-container">
-        <video src={bgVid} loop autoPlay muted controls />
-      </div>
-      <Card>
-        <Timer
-          timerDays={timerDays}
-          timerHours={timerHours}
-          timerMinutes={timerMinutes}
-          timerSeconds={timerSeconds}
-        />
-      </Card>
+      {/* <div className="video-container">
+      </div> */}
+      <video src={bgVid} loop autoPlay muted/>
+
+      <Timer
+        timerDays={timerDays}
+        timerHours={timerHours}
+        timerMinutes={timerMinutes}
+        timerSeconds={timerSeconds}
+      />
     </section>
   );
 };
