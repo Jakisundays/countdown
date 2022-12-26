@@ -42,8 +42,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 1rem; */
-
 }
 
 .clock section p {
@@ -95,6 +93,12 @@ video {
   overflow: hidden;
 }
 
+@media screen and (max-width: 515px){
+  .clock span {
+    font-size: 5vh;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .clock-container {
     justify-content: center;
@@ -110,13 +114,9 @@ video {
     width: 92vw;
     max-width: 100%;
   }
-  .clock section {
-    padding: none;
-  }
+
   .clock section small {
     font-size: 14px;
   }
-  .clock span {
-    font-size: 5vh;
-  }
+  
 }
