@@ -34,6 +34,7 @@
   max-width: 100%;
   align-items: center;
   text-shadow: 1px 1px 7px orangered;
+  gap: 8px;
 }
 
 .clock section {
@@ -41,6 +42,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* padding: 1rem; */
+
 }
 
 .clock section p {
@@ -49,11 +52,11 @@
 }
 
 .clock section small {
-  font-size: 4vh;
+  font-size: 3.2vh;
 }
 
 .clock span {
-  font-size: 12vh;
+  font-size: 9vh;
   font-family: "clockFont";
   margin-bottom: 35px;
 }
