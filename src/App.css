@@ -4,6 +4,7 @@
   box-sizing: border-box;
   /* font-family: "Cute Font", cursive; */
   font-family: "Iceland", cursive;
+  /* border: solid red; */
 }
 
 @font-face {
@@ -31,10 +32,11 @@
 .clock {
   display: flex;
   justify-content: center;
+  gap: 4px;
   max-width: 100%;
   align-items: center;
   text-shadow: 1px 1px 7px orangered;
-  gap: 8px;
+  gap: 48px;
 }
 
 .clock section {
@@ -66,13 +68,13 @@
 }
 
 video {
-  height: 50vh;
+  width: 71%;
   object-fit: fill;
   max-width: 100%;
-  border-radius: 7px;
-  box-shadow: 0px 0px 5px 0px white;
-  -webkit-box-shadow: 0px 0px 5px 0px white;
-  -moz-box-shadow: 0px 0px 5px 0px white;
+  /* border-radius: 7px; */
+  box-shadow: 0px 0px 2px 0px white;
+  -webkit-box-shadow: 0px 0px 2px 0px white;
+  -moz-box-shadow: 0px 0px 2px 0px white;
 }
 
 @keyframes App-logo-spin {
@@ -104,6 +106,11 @@ video {
     justify-content: center;
     gap: 100px;
   }
+
+  .clock {
+    gap: 38px;
+  }
+
   .clock span {
     font-size: 5vh;
     font-family: "clockFont";
