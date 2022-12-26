@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import bgVid from "../assets/bgVid.mp4";
-import Card from "./Card";
 
 const Timer = ({ timerDays, timerHours, timerMinutes, timerSeconds }) => {
   return (
@@ -77,10 +76,7 @@ const Clock = () => {
 
   return (
     <section className="clock-container">
-      {/* <div className="video-container">
-      </div> */}
-      <video src={bgVid} loop autoPlay muted/>
-
+      <video src={bgVid} loop autoPlay muted playsInline />
       <Timer
         timerDays={timerDays}
         timerHours={timerHours}

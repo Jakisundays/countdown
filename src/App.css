@@ -25,12 +25,13 @@
 .timer-wrapper {
   text-shadow: 3px 3px 1px black;
   color: #ffffff;
-  /* z-index: 999; */
+  max-width: 100%;
 }
 
 .clock {
   display: flex;
   justify-content: center;
+  max-width: 100%;
   align-items: center;
   text-shadow: 1px 1px 7px orangered;
 }
@@ -40,14 +41,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
 }
+
 .clock section p {
   font-size: 10vw;
   font-family: "clockFont";
 }
+
 .clock section small {
-  font-size: 35px;
+  font-size: 4vh;
+}
+
+.clock span {
+  font-size: 12vh;
+  font-family: "clockFont";
+  margin-bottom: 35px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -59,6 +67,7 @@
 video {
   height: 50vh;
   object-fit: fill;
+  max-width: 100%;
   border-radius: 7px;
   box-shadow: 0px 0px 5px 0px white;
   -webkit-box-shadow: 0px 0px 5px 0px white;
@@ -74,12 +83,6 @@ video {
   }
 }
 
-.clock span {
-  font-size: 12vh;
-  font-family: "clockFont";
-  margin-bottom: 35px;
-}
-
 .video-container {
   position: absolute;
   top: 0;
@@ -90,7 +93,7 @@ video {
 }
 
 @media screen and (max-width: 425px) {
-  .clock-container{
+  .clock-container {
     justify-content: center;
     gap: 100px;
   }
@@ -104,7 +107,13 @@ video {
     width: 92vw;
     max-width: 100%;
   }
+  .clock section {
+    padding: none;
+  }
   .clock section small {
-    font-size: 12px;
+    font-size: 14px;
+  }
+  .clock span {
+    font-size: 5vh;
   }
 }

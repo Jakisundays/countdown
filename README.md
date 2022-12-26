@@ -1,1 +1,1 @@
-Agregar media querias al card y decirle a tommas de muted.
+Done? Cambiar favicon y title.
