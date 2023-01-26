@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import bgVid from "../assets/bgVid.mp4";
+import { FaInstagram } from "react-icons/fa";
 
 const Timer = ({ timerDays, timerHours, timerMinutes, timerSeconds }) => {
   return (
@@ -33,16 +34,30 @@ const Timer = ({ timerDays, timerHours, timerMinutes, timerSeconds }) => {
   );
 };
 
+const Btn = () => {
+  const toInsta = () => {
+    window.location.href = "https://www.instagram.com/indomita.secretsociety/"
+  };
+
+  return (
+    <button className="button" onClick={() => toInsta()}>
+      SET A REMINDER ON INSTAGRAM
+      <FaInstagram />
+    </button>
+  );
+};
+
 const Clock = () => {
-  const [timerDays, setTimerDays] = useState();
-  const [timerHours, setTimerHours] = useState();
-  const [timerMinutes, setTimerMinutes] = useState();
-  const [timerSeconds, setTimerSeconds] = useState();
+  const [timerDays, setTimerDays] = useState(0);
+  const [timerHours, setTimerHours] = useState(0);
+  const [timerMinutes, setTimerMinutes] = useState(0);
+  const [timerSeconds, setTimerSeconds] = useState(0);
 
   let interval;
 
   const startTimer = () => {
-    const countDownDate = new Date("Jan 21,2023 ").getTime();
+    const countDownDate = Date.UTC(2023, 1, 5, 21, 0, 0, 0);
+    // const countDownDate = new Date(2023, 1, 5, 21, 0, 0, 0).getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -58,8 +73,8 @@ const Clock = () => {
 
       if (distance < 0) {
         // Stop Timer
-
         clearInterval(interval.current);
+        window.location.replace("https://google.com");
       } else {
         // Update Timer
         setTimerDays(days);
@@ -77,6 +92,7 @@ const Clock = () => {
   return (
     <section className="clock-container">
       <video src={bgVid} loop autoPlay muted playsInline />
+      <Btn />
       <Timer
         timerDays={timerDays}
         timerHours={timerHours}

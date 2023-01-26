@@ -19,6 +19,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  /* gap: 7px; */
   align-items: center;
   background-color: black;
 }
@@ -47,7 +48,7 @@
 }
 
 .clock section p {
-  font-size: 10vw;
+  font-size: 7vw;
   font-family: "clockFont";
 }
 
@@ -95,6 +96,25 @@ video {
   overflow: hidden;
 }
 
+.button{
+  color: rgb(207, 207, 207);
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  padding: 10px 40px 10px 40px;
+  position: relative;
+  border: 1px solid #878787;
+  border-left: none;
+  border-right: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 515px){
   .clock span {
     font-size: 5vh;
@@ -122,8 +142,19 @@ video {
     max-width: 100%;
   }
 
+  .clock section p {
+    font-size: 14vw;
+    font-family: "clockFont";
+  }
+
   .clock section small {
     font-size: 14px;
   }
   
+  .button{
+    font-size: 1.1rem;
+    padding: 5px 10px 5px 10px;
+    gap: 2px;
+  }
 }
+
