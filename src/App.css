@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  /* gap: 7px; */
+  gap: 20px;
   align-items: center;
   background-color: black;
 }
@@ -69,7 +69,7 @@
 }
 
 video {
-  width: 71%;
+  width: 62%;
   object-fit: fill;
   max-width: 100%;
   /* border-radius: 7px; */
@@ -96,7 +96,66 @@ video {
   overflow: hidden;
 }
 
-.button{
+button {
+  background-color: #444141;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  margin-top: 2rem;
+ }
+ 
+ button:hover {
+  /* background-image: linear-gradient(90deg, #BF8E2C 0%, #19433E 50%, #BCB199 100%); */
+  background-color: #BF8E2C;
+  /* background-color:  #BCB199; */
+  /* background-color: #19433E; */
+  animation: slidernbw 5s linear infinite;
+  /* color: #000; */
+  color: WHITE;
+ }
+ 
+ @keyframes slidernbw {
+  to {
+   background-position: 20vw;
+  }
+ }
+
+/* button {
+  background-color: #eee;
+  border: none;
+  padding: 1rem;
+  font-size: 1.3rem;
+  width: 10em;
+  border-radius: 1rem;
+  color: black;
+  font-weight: bold;
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+}
+
+button:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+}
+
+button:hover:not(:disabled) {
+  background: black;
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+}
+
+button:disabled {
+  cursor: auto;
+  color: grey;
+} */
+
+/* .button {
   color: rgb(207, 207, 207);
   background-color: black;
   display: flex;
@@ -115,7 +174,25 @@ video {
   cursor: pointer;
 }
 
-@media screen and (max-width: 515px){
+.button-2 {
+  color: white;
+  background-color: black;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  padding: 10px 30px 10px 30px;
+  position: relative;
+  border: 1px solid white;
+  border-left: none;
+  border-right: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 5px 7px 9px 2px rgba(255,255,255,0.75);
+-webkit-box-shadow: 5px 7px 9px 2px rgba(255,255,255,0.75);
+-moz-box-shadow: 5px 7px 9px 2px rgba(255,255,255,0.75);
+} */
+
+@media screen and (max-width: 515px) {
   .clock span {
     font-size: 5vh;
   }
@@ -124,7 +201,7 @@ video {
 @media screen and (max-width: 425px) {
   .clock-container {
     justify-content: center;
-    gap: 100px;
+    gap: 60px;
   }
 
   .clock {
@@ -150,11 +227,10 @@ video {
   .clock section small {
     font-size: 14px;
   }
-  
-  .button{
+
+  .button {
     font-size: 1.1rem;
     padding: 5px 10px 5px 10px;
     gap: 2px;
   }
 }
-

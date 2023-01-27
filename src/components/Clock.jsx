@@ -40,9 +40,10 @@ const Btn = () => {
   };
 
   return (
-    <button className="button" onClick={() => toInsta()}>
-      SET A REMINDER ON INSTAGRAM
-      <FaInstagram />
+    <button className="button-2" onClick={() => toInsta()}>
+      {/* SET A REMINDER ON INSTAGRAM */}
+      {/* <FaInstagram /> */}
+      Don't click here.
     </button>
   );
 };
