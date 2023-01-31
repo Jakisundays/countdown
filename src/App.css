@@ -13,15 +13,17 @@
 }
 
 .clock-container {
+  /* height: 100%; */
   height: 100vh;
   max-width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
   background-color: black;
+  /* overflow: hidden; */
 }
 
 .timer-wrapper {
@@ -33,7 +35,6 @@
 .clock {
   display: flex;
   justify-content: center;
-  gap: 4px;
   max-width: 100%;
   align-items: center;
   text-shadow: 1px 1px 7px orangered;
@@ -48,19 +49,19 @@
 }
 
 .clock section p {
-  font-size: 7vw;
+  font-size: 5.2rem;
   font-family: "clockFont";
 }
 
 .clock section small {
-  font-size: 3.2vh;
+  font-size: 1.8rem;
 }
 
-.clock span {
-  font-size: 9vh;
+/* .clock span {
+  font-size: 6vw;
   font-family: "clockFont";
   margin-bottom: 35px;
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -106,91 +107,19 @@ button {
   font-weight: bold;
   letter-spacing: 1px;
   border: none;
-  margin-top: 2rem;
- }
- 
- button:hover {
-  /* background-image: linear-gradient(90deg, #BF8E2C 0%, #19433E 50%, #BCB199 100%); */
-  background-color: #BF8E2C;
-  /* background-color:  #BCB199; */
-  /* background-color: #19433E; */
+}
+
+button:hover {
+    background-color: #bf8e2c;
   animation: slidernbw 5s linear infinite;
-  /* color: #000; */
   color: WHITE;
- }
- 
- @keyframes slidernbw {
+}
+
+@keyframes slidernbw {
   to {
-   background-position: 20vw;
+    background-position: 20vw;
   }
- }
-
-/* button {
-  background-color: #eee;
-  border: none;
-  padding: 1rem;
-  font-size: 1.3rem;
-  width: 10em;
-  border-radius: 1rem;
-  color: black;
-  font-weight: bold;
-  box-shadow: 0 0.4rem #dfd9d9;
-  cursor: pointer;
 }
-
-button:active {
-  color: white;
-  box-shadow: 0 0.2rem #dfd9d9;
-  transform: translateY(0.2rem);
-}
-
-button:hover:not(:disabled) {
-  background: black;
-  color: white;
-  text-shadow: 0 0.1rem #bcb4b4;
-}
-
-button:disabled {
-  cursor: auto;
-  color: grey;
-} */
-
-/* .button {
-  color: rgb(207, 207, 207);
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  font-size: 1.5rem;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  padding: 10px 40px 10px 40px;
-  position: relative;
-  border: 1px solid #878787;
-  border-left: none;
-  border-right: none;
-  border-radius: 2px;
-  cursor: pointer;
-}
-
-.button-2 {
-  color: white;
-  background-color: black;
-  font-size: 1.3rem;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  padding: 10px 30px 10px 30px;
-  position: relative;
-  border: 1px solid white;
-  border-left: none;
-  border-right: none;
-  border-radius: 20px;
-  cursor: pointer;
-  box-shadow: 5px 7px 9px 2px rgba(255,255,255,0.75);
--webkit-box-shadow: 5px 7px 9px 2px rgba(255,255,255,0.75);
--moz-box-shadow: 5px 7px 9px 2px rgba(255,255,255,0.75);
-} */
 
 @media screen and (max-width: 515px) {
   .clock span {
@@ -208,11 +137,6 @@ button:disabled {
     gap: 38px;
   }
 
-  .clock span {
-    font-size: 5vh;
-    font-family: "clockFont";
-    margin-bottom: 17px;
-  }
   video {
     height: 30vh;
     width: 92vw;

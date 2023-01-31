@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import bgVid from "../assets/bgVid.mp4";
-import { FaInstagram } from "react-icons/fa";
 
 const Timer = ({ timerDays, timerHours, timerMinutes, timerSeconds }) => {
   return (
@@ -36,13 +35,14 @@ const Timer = ({ timerDays, timerHours, timerMinutes, timerSeconds }) => {
 
 const Btn = () => {
   const toInsta = () => {
-    window.location.href = "https://www.instagram.com/indomita.secretsociety/"
+    window.open(
+      "https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTQxNjEzNzIwNDI2NDg2?igshid=MDJmNzVkMjY=",
+      "_blank"
+    );
   };
 
   return (
     <button className="button-2" onClick={() => toInsta()}>
-      {/* SET A REMINDER ON INSTAGRAM */}
-      {/* <FaInstagram /> */}
       Don't click here.
     </button>
   );
@@ -58,7 +58,6 @@ const Clock = () => {
 
   const startTimer = () => {
     const countDownDate = Date.UTC(2023, 1, 5, 21, 0, 0, 0);
-    // const countDownDate = new Date(2023, 1, 5, 21, 0, 0, 0).getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -75,7 +74,7 @@ const Clock = () => {
       if (distance < 0) {
         // Stop Timer
         clearInterval(interval.current);
-        window.location.replace("https://google.com");
+        window.location.replace("https://weareindomita.com");
       } else {
         // Update Timer
         setTimerDays(days);
@@ -92,7 +91,7 @@ const Clock = () => {
 
   return (
     <section className="clock-container">
-      <video src={bgVid} loop autoPlay muted playsInline />
+      <video src={bgVid} loop autoPlay muted playsInline controls />
       <Btn />
       <Timer
         timerDays={timerDays}
