@@ -57,7 +57,7 @@ const Clock = () => {
   let interval;
 
   const startTimer = () => {
-    const countDownDate = Date.UTC(2023, 1, 5, 21, 0, 0, 0);
+    const countDownDate = Date.UTC(2023, 6, 5, 21, 0, 0, 0);
 
     interval = setInterval(() => {
       const now = new Date().getTime();
